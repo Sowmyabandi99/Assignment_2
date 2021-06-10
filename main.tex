@@ -195,30 +195,22 @@ The coordinates of A and N can be written as follows:
 \end{itemize}
 The vector equation of line is given by:
 \begin{align}
-\vec{A} &= \vec{L} +\lambda \myvec{\cos E\\\sin E} 
+\vec{A}&=\vec{L}+b\myvec{\cos E\\\sin E} 
 \\
-\implies\norm{\vec{A}-\vec{L}} &= \abs{\lambda}\times\norm{\myvec{\cos 105\degree\\\sin 105\degree}} 
+\implies\norm{\vec{A}-\vec{L}}&=b\times\norm{\myvec{\cos 105\degree\\\sin 105\degree}} 
 \\
-\implies\norm{\vec{A}-\vec{L}} &= \abs{\lambda}\times1
-\end{align}
-Using \eqref{eq4} we get:
-\begin{align}
-\implies \abs{\lambda}=b 
+\implies\norm{\vec{A}-\vec{L}}&=b
 \end{align}
 \begin{itemize}
 \item For finding coordinates of N:
 \end{itemize}
 The vector equation of line is given by:
 \begin{align}
-\vec{N}&=\vec{P}+\mu \myvec{\cos P\\\sin P}=\mu \myvec{\cos P\\\sin P} \quad(\because \vec{P}=0) 
+\vec{N}&=\vec{P}+d\myvec{\cos P\\\sin P}=d\myvec{\cos P\\\sin P} \quad(\because\vec{P}=0) 
 \\
-\implies\norm{\vec{N}} &= \abs{\mu}\times\norm{\myvec{\cos 90\degree\\\sin 90\degree}} 
+\implies\norm{\vec{N}}&=d\times\norm{\myvec{\cos 90\degree\\\sin 90\degree}} 
 \\
-\implies\norm{\vec{N}} &= \abs{\mu}\times1
-\end{align}
-Using \eqref{eq6} we get:
-\begin{align}
-\implies \abs{\mu}=d
+\implies\norm{\vec{N}}&=d
 \end{align}
 \item Using inner products of vectors we get,
 \begin{align}
@@ -228,21 +220,41 @@ Using \eqref{eq6} we get:
 \end{align}
 \item Now, dividing \eqref{eq11} and \eqref{eq12} we get:
 \begin{align}
-\frac{(A-N)^\intercal(A-L)}{(A-N)^\intercal(P-N)}\times\frac{\norm{P-N}}{\norm{A-L}}=\frac{\cos A}{\cos N} \\
-\frac{(A-N)^\intercal(A-L)}{(A-N)^\intercal(P-N)}\times\frac{d}{b}=\frac{\cos A}{\cos N}
+\frac{(A-N)^\intercal(A-L)}{(A-N)^\intercal(P-N)}\times\frac{\norm{P-N}}{\norm{A-L}}=
+\frac{\cos A}{\cos N}
 \\
-\frac{A^\intercal A-A^\intercal L-N^\intercal A+N^\intercal L}{-A^\intercal N+N^\intercal N}= \frac{b}{d}\times\frac{\cos A}{\cos N}  \quad(\because \vec{P}=0) 
+\frac{(A-N)^\intercal(A-L)}{(A-N)^\intercal(P-N)}\times\frac{d}{b}=
+\frac{\cos A}{\cos N}
+\\
+\frac{A^\intercal A-A^\intercal L-N^\intercal A+N^\intercal L}{-A^\intercal N+N^\intercal N}=\frac{b}{d}\times\frac{\cos A}{\cos N}(\because\vec{P}=0) \label{eq13}
 \end{align}
 \begin{align}
-Let \quad S=b\times\frac{\cos A}{\cos N} \label{eq13}
+Let \quad S=b\times\frac{\cos A}{\cos N} \label{eq14}
 \end{align}
+On computing,
 \begin{align}
-\implies d=\frac{S(-A^\intercal N+N^\intercal N)}{A^\intercal A-A^\intercal L-N^\intercal A+N^\intercal L}
+A^\intercal A&=a^2+b^2+2ab\cos E
+\\
+A^\intercal L&=a^2+ab\cos E
+\\
+N^\intercal A&=b d\sin P \sin E
+\\
+N^\intercal L&=0
+\\
+A^\intercal N&=b d\sin P \sin E
+\\
+N^\intercal N&=d^2
+\end{align}
+From \eqref{eq13},
+\begin{align}
+\implies d&=\frac{S(d^2-b d\sin P \sin E)}{b^2+ab\cos E-b d\sin P \sin E}
 \end{align}
 \end{proof}
-\item Now using \eqref{eq5}, \eqref{eq9} and \eqref{eq13} and solving we get
+By solving,we get
 \begin{align}
-\implies d=6.47
+\implies d&=\frac{-25.50(d^2-6.27d)}{42.25-6.72-6.27d}
+\\
+\implies d&=6.47
 \end{align}
 \item Putting values of b and d in \eqref{eq9} and \eqref{eq10}
 \begin{align}
