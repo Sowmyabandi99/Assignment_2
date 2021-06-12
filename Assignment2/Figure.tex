@@ -1,0 +1,121 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm} 
+8
+
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{tkz-euclide}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\begin{tikzpicture}
+\centering
+\draw[step=1cm,gray,very thin] (-2,-2) grid (10,12);
+
+\draw[thick,->] (-1,0) -- (6,0) node[anchor=north west] {x axis};
+\draw[thick,->] (0,-1) -- (0,10) node[anchor=south east] {y axis};
+
+\foreach \x in {1,2,3,4,5,}
+   \draw (\x cm,-1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+\foreach \y in {1,2,3,4,5,6,7,8,9}
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+
+\draw[red,thick] 
+(0,0)--(4,0);
+\draw[ green,thick]
+(4,0)--(2.31,6.27);
+\draw[ blue,thick]
+(2.31,6.27)--(0,6.47);
+\draw[brown,thick]
+(0,6.47)--(0,0);
+\draw[orange,thick]
+(0,0)--(2.31,6.27);
+%Labeling points
+\node (P) at (0, 0)[label=below left:$P$] {};
+\node (L) at (4, 0)[label=above right:$L$] {};
+\node (A) at (2.31,6.27)[label=above right:$A$] {};
+\node (N) at (0,6.47)[label=above right:$N$] {};
+
+\filldraw (0,0) circle[radius=2.5pt,];
+\filldraw (4,0) circle[radius=2.5pt];
+\filldraw (2.31,6.27) circle[radius=2.5pt];
+\filldraw (0,6.47) circle[radius=2.5pt];
+
+\tkzMarkAngle(N,A,L)
+\tkzLabelAngle[pos = 0.6](N,A,L){$\gamma$}
+
+\tkzMarkAngle(L,P,N)
+\tkzLabelAngle[pos = 1.6](L,P,N){$\theta$}
+
+\tkzMarkAngle(P,N,A)
+\tkzLabelAngle[pos = 0.6](P,N,A){$\beta$}
+
+\tkzMarkAngle(A,L,P)
+\tkzLabelAngle[pos = 0.6](A,L,P){$\alpha$}
+
+
+
+\end{tikzpicture}
+\end{document}
